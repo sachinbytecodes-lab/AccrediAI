@@ -1,5 +1,9 @@
 # AccrediAI — Implementation Blueprint (Days 2–10)
 
+> **Day 2 Addendum (added after system design session):**
+> Tech stack is now finalized: **Next.js 15 (App Router, TypeScript, Tailwind, shadcn/ui) + Next.js API Routes with a Service Layer + PostgreSQL/Supabase (Auth, Storage, RLS) + Prisma + Zod + TanStack Query + Recharts + Claude Sonnet via an AI Provider abstraction**, deployed on Vercel. This replaces the placeholder "Node/Express + Python service" language originally in Day 2 below — same architecture intent (one deployable backend, API-first), fewer moving parts. OCR, Sentry, Swagger, and formal test frameworks (Vitest/Playwright) are explicitly deferred past v1.0.
+> Full design detail now lives in `/docs/ARCHITECTURE.md`, `/docs/SCHEMA.md`, `/docs/API.md`, `/docs/UI-WIREFRAMES.md`, and `/docs/PROJECT-STRUCTURE.md` — Day 3 onward should treat these five files as authoritative and should not re-derive schema, endpoints, or component structure from scratch.
+
 **This document is the single source of truth for building AccrediAI's v1.0.**
 Each day below is written so that a *fresh AI conversation*, given only this file (and the PRD), can continue the build without re-deciding architecture, scope, or priorities. Do not redesign or re-scope — only implement, adapt tactically, and hand off.
 
